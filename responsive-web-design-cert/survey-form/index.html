@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link font>
+    <link fa icons>
+    <title>FCC Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <section id="head">
+            <h1 id="title">Teenage Mutant Ninja Turtles Survey Form</h1>
+            <p id="description">Let us know what you think about TMNT</p>
+        </section>
+        <section id="survey-form">
+            <div class="user-details">
+                <label>Name: <input id="name-label" type="text" placeholder="Enter your name"></label>
+                <label>Email: <input id="email-label" type="text" placeholder="Enter your email"></label>
+                <label>Age: <input id="number-label" type="number" placeholder="Enter your age"></label>
+            </div>
+            <div class="survey-questions">
+                <label>How big a fan are you of TMNT? <select id="dropdown" class="dropdown">
+                    <option disabled value>Select and option</option>
+                    <option value="huge fan">Huge fan</option>
+                    <option value="average fan">Average fan</option>
+                    <option value="not a fan">Not a fan</option></select>
+                </label>
+                <p>Who is your favourite Turtle?</p>
+                <label for="favourite-turtle">
+                    <input id="michaelangelo" type="radio" name="favourite-turtle">Michaelangelo</label>
+                <label for="favourite-turtle">
+                    <input id="Leonardo" type="radio" name="favourite-turtle">Leonardo</label>
+                <label for="favourite-turtle">
+                    <input id="Donatello" type="radio" name="favourite-turtle">Donatello</label>
+                <label for="favourite-turtle">
+                    <input id="Rafael" type="radio" name="favourite-turtle">Rafael</label>
+                <p>Which of the following series and/or movies did you like?</p>
+                <label for="series1">
+                    <input id="series1" type="checkbox" name="favourite-series">Series 1
+                </label>
+                <label for="series2">
+                    <input id="series2" type="checkbox" name="favourite-series">Series 2
+                </label>
+                <label for="series3">
+                    <input id="series3" type="checkbox" name="favourite-series">Series 3
+                </label>
+                <label for="series4">
+                    <input id="series4" type="checkbox" name="favourite-series">Series 4
+                </label>
+                <label for="movie1">
+                    <input id="movie1" type="checkbox" name="favourite-series">Movie 1
+                </label>
+                <label for="movie2">
+                    <input id="movie2" type="checkbox" name="favourite-series">Movie 2
+                </label>
+            </div>
+            <div class="additional-comments">
+                <label for="comments">Do you have any comments or suggestions about this survey?</label>
+                <textarea id="comments" class="input-field" style="height:50px; resize; vertical;" name="comment" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <div id="submit">
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
