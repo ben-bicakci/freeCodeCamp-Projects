@@ -29,6 +29,9 @@ body {
     align-items: center;
 }
 
+#title {
+}
+
 #head img {
     max-width: 200px;
 }
@@ -37,8 +40,13 @@ body {
     color: #eee;
 }
 
+#description {
+    border-bottom: 2px solid #333;
+    align-self: center;
+}
+
 #survey-form {
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.7);
     border: 3px solid #333;
     display: flex;
     flex-direction: column;
@@ -53,6 +61,10 @@ body {
     font-weight: bold;
 }
 
+.survey-questions {
+    adisplay: flex;
+}
+
 #description {
     font-size: 20px;
 }
@@ -60,6 +72,38 @@ body {
 .required {
     color: red;
     font-weight: bold;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #777;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.employed {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #777;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #777;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.safety {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #777;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* button {
@@ -74,8 +118,23 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 2rem;
+    line-height: 1rem;
     width: 100vw;
     height: 80px;
-    color: #f4f4f4f4;
+    padding-top: 10px;
+}
+
+.footer-link {
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+}
+
+footer i:hover{
+    color: red;
+}
+
+footer i, footer p {
+    color: rgb(243, 207, 194);
+    font-size: 14px;
+
 }

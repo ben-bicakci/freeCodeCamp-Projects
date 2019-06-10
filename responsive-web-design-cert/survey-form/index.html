@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link fa icons>
-    <title>FCC Survey Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <title>FCC Survey Form</title>
 </head>
 <body>
     <header id="head">
@@ -18,44 +17,45 @@
     </header>
     <div class="container">
         <section id="survey-form">
-            <p id="description">Help improve Weyland-Yutani by answering these questions:</p>
+            <p id="description">Help improve Weyland-Yutani by answering some quick questions</p>
             <div class="user-details">
                 <label><span class="required">*</span>Name: <input id="name-label" type="text" placeholder="Enter your name"></label>
                 <label><span class="required">*</span>Email: <input id="email-label" type="text" placeholder="Enter your email"></label>
                 <label><span class="required">*</span>Age: <input id="number-label" type="number" placeholder="Enter your age"></label>
+                <label><span class="required">*</span>Division: <select id="dropdown" class="dropdown">
+                        <option disabled value>Select an option</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="colony">Colony Administration</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="technology">Technology</option></select>
+                    </label>
             </div>
             <div class="survey-questions">
-                <label><span class="required">*</span>Division: <select id="dropdown" class="dropdown">
-                    <option disabled value>Select an option</option>
-                    <option value="corporate">Corporate</option>
-                    <option value="colony">Colony Administration</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="technology">Technology</option></select>
-                </label>
                 <p>How long have you been employed by Weyland-Yutani?</p>
-                <label for="time-employed">
-                    <input id="Less than 1 year" type="radio" name="time-employed">Less than 1 year</label>
-
-                <label for="time-employed">
-                    <input id="1-5 years" type="radio" name="time-employed">1-5 years</label>
-
-                <label for="time-employed">
-                    <input id="5-10 years" type="radio" name="time-employed">5-10 years</label>
-
-                <label for="time-employed">
-                    <input id="10+ years" type="radio" name="time-employed">10+ years</label>
-
+                <div class="employed">
+                    <label for="time-employed">
+                        <input id="Less than 1 year" type="radio" name="time-employed">Less than 1 year</label>
+                    <label for="time-employed">
+                        <input id="1-5 years" type="radio" name="time-employed">1-5 years</label>
+                    <label for="time-employed">
+                        <input id="5-10 years" type="radio" name="time-employed">5-10 years</label>
+                    <label for="time-employed">
+                        <input id="10+ years" type="radio" name="time-employed">10+ years</label>
+                </div>
                 <p><span class="required">*</span>Current employment location:</p>
-                <label for="location">
-                    <input id="London" type="radio" name="location">London</label>
-                <label for="location">
-                    <input id="San Francisco" type="radio" name="location">San Francisco</label>
-                <label for="location">
-                    <input id="Tokyo" type="radio" name="location">Tokyo</label>
-                <label for="location">
-                    <input id="LV-426" type="radio" name="location">LV-426</label>
+                <div class="location">
+                    <label for="location">
+                        <input id="London" type="radio" name="location">London</label>
+                    <label for="location">
+                        <input id="San Francisco" type="radio" name="location">San Francisco</label>
+                    <label for="location">
+                        <input id="Tokyo" type="radio" name="location">Tokyo</label>
+                    <label for="location">
+                        <input id="LV-426" type="radio" name="location">LV-426</label>
+                </div>
                 <p><span class="required">*</span>During the past month, have you experienced a safety issue related to any of the following? (select any/all that apply)</p>
+                <div class="safety">
                 <label for="xenomorphs">
                     <input id="series1" type="checkbox" name="favourite-series">Xenomorphs
                 </label>
@@ -68,7 +68,9 @@
                 <label for="geoengineering-failure">
                     <input id="series4" type="checkbox" name="favourite-series">Geoengineering Failure
                 </label>
+                </div>
             </div>
+            <br>
             <div class="additional-comments">
                 <label for="comments">Do you have any comments you would like to add?</label>
                 <textarea id="comments" class="input-field" name="comments" placeholder="Enter any comments or suggestions you have here..."></textarea>
@@ -82,10 +84,12 @@
     </div>
     <footer>
         <div class="contacts">
-            Contacts
+            <a class="footer-link" href="https://github.com/ben-bicakci" target="_blank"><i class="fa fa-github"></i></a>
+            <a class="footer-link" href="https://codepen.io/ben-bicakci/" target="_blank"><i class="fa fa-codepen"></i></a>
+            <a class="footer-link" href="https://www.freecodecamp.org/ben-bicakci" target="_blank"><i class="fa fa-free-code-camp"></i></a>
         </div>
         <div class="webmaster">
-            Webmaster
+            <p>Ben Bicakci 2019</p>
         </div>
     </footer>
 </body>
