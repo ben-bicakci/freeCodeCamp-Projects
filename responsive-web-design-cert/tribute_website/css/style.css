@@ -9,6 +9,14 @@ body {
     margin: 0;
 }
 
+@media (min-height: 600px) {
+    #img-div img {
+        max-width: 20% !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @media (max-width: 450px) {
     .navbar {
@@ -33,6 +41,17 @@ body {
         font-size: 13px !important;
     }
 
+}
+
+@media (max-height: 600px) {
+    #tribute-info p{
+        opacity: 0.9;
+        font-size: 12px !important;
+    }
+
+    #img-caption {
+        opacity: 0 !important;
+    }
 }
 
 section {
@@ -153,7 +172,7 @@ section#info {
 }
 
 #img-div img {
-    max-width: 20%;
+    max-width: 0%;
     display: block;
     margin-left: auto;
     margin-right: auto;
