@@ -5,66 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link font>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link fa icons>
     <title>FCC Survey Form</title>
 </head>
 <body>
+    <header id="head">
+        <div class="logo">
+            <img src="images/logo_small.jpg" alt="Weyland-Yutani logo">
+        </div>
+        <h1 id="title">Weyland-Yutani Employee Survey</h1>
+    </header>
     <div class="container">
-        <section id="head">
-            <h1 id="title">Teenage Mutant Ninja Turtles Survey Form</h1>
-            <p id="description">Let us know what you think about TMNT</p>
-        </section>
         <section id="survey-form">
+            <p id="description">Help improve Weyland-Yutani by answering these questions:</p>
             <div class="user-details">
-                <label>Name: <input id="name-label" type="text" placeholder="Enter your name"></label>
-                <label>Email: <input id="email-label" type="text" placeholder="Enter your email"></label>
-                <label>Age: <input id="number-label" type="number" placeholder="Enter your age"></label>
+                <label><span class="required">*</span>Name: <input id="name-label" type="text" placeholder="Enter your name"></label>
+                <label><span class="required">*</span>Email: <input id="email-label" type="text" placeholder="Enter your email"></label>
+                <label><span class="required">*</span>Age: <input id="number-label" type="number" placeholder="Enter your age"></label>
             </div>
             <div class="survey-questions">
-                <label>How big a fan are you of TMNT? <select id="dropdown" class="dropdown">
-                    <option disabled value>Select and option</option>
-                    <option value="huge fan">Huge fan</option>
-                    <option value="average fan">Average fan</option>
-                    <option value="not a fan">Not a fan</option></select>
+                <label><span class="required">*</span>Division: <select id="dropdown" class="dropdown">
+                    <option disabled value>Select an option</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="colony">Colony Administration</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="technology">Technology</option></select>
                 </label>
-                <p>Who is your favourite Turtle?</p>
-                <label for="favourite-turtle">
-                    <input id="michaelangelo" type="radio" name="favourite-turtle">Michaelangelo</label>
-                <label for="favourite-turtle">
-                    <input id="Leonardo" type="radio" name="favourite-turtle">Leonardo</label>
-                <label for="favourite-turtle">
-                    <input id="Donatello" type="radio" name="favourite-turtle">Donatello</label>
-                <label for="favourite-turtle">
-                    <input id="Rafael" type="radio" name="favourite-turtle">Rafael</label>
-                <p>Which of the following series and/or movies did you like?</p>
-                <label for="series1">
-                    <input id="series1" type="checkbox" name="favourite-series">Series 1
+                <p>How long have you been employed by Weyland-Yutani?</p>
+                <label for="time-employed">
+                    <input id="Less than 1 year" type="radio" name="time-employed">Less than 1 year</label>
+
+                <label for="time-employed">
+                    <input id="1-5 years" type="radio" name="time-employed">1-5 years</label>
+
+                <label for="time-employed">
+                    <input id="5-10 years" type="radio" name="time-employed">5-10 years</label>
+
+                <label for="time-employed">
+                    <input id="10+ years" type="radio" name="time-employed">10+ years</label>
+
+                <p><span class="required">*</span>Current employment location:</p>
+                <label for="location">
+                    <input id="London" type="radio" name="location">London</label>
+                <label for="location">
+                    <input id="San Francisco" type="radio" name="location">San Francisco</label>
+                <label for="location">
+                    <input id="Tokyo" type="radio" name="location">Tokyo</label>
+                <label for="location">
+                    <input id="LV-426" type="radio" name="location">LV-426</label>
+                <p><span class="required">*</span>During the past month, have you experienced a safety issue related to any of the following? (select any/all that apply)</p>
+                <label for="xenomorphs">
+                    <input id="series1" type="checkbox" name="favourite-series">Xenomorphs
                 </label>
-                <label for="series2">
-                    <input id="series2" type="checkbox" name="favourite-series">Series 2
+                <label for="power-loaders">
+                    <input id="series2" type="checkbox" name="favourite-series">Power Loaders
                 </label>
-                <label for="series3">
-                    <input id="series3" type="checkbox" name="favourite-series">Series 3
+                <label for="mining-accident">
+                    <input id="series3" type="checkbox" name="favourite-series">Mining Accident
                 </label>
-                <label for="series4">
-                    <input id="series4" type="checkbox" name="favourite-series">Series 4
-                </label>
-                <label for="movie1">
-                    <input id="movie1" type="checkbox" name="favourite-series">Movie 1
-                </label>
-                <label for="movie2">
-                    <input id="movie2" type="checkbox" name="favourite-series">Movie 2
+                <label for="geoengineering-failure">
+                    <input id="series4" type="checkbox" name="favourite-series">Geoengineering Failure
                 </label>
             </div>
             <div class="additional-comments">
-                <label for="comments">Do you have any comments or suggestions about this survey?</label>
-                <textarea id="comments" class="input-field" style="height:50px; resize; vertical;" name="comment" placeholder="Enter your comments here..."></textarea>
+                <label for="comments">Do you have any comments you would like to add?</label>
+                <textarea id="comments" class="input-field" name="comments" placeholder="Enter any comments or suggestions you have here..."></textarea>
             </div>
             <div id="submit">
 
             </div>
+            <button id="submit">Submit</button>
+            <p>Thank you for completing this survey. We value the opinions of ALL our employees.</p>
         </section>
     </div>
+    <footer>
+        <div class="contacts">
+            Contacts
+        </div>
+        <div class="webmaster">
+            Webmaster
+        </div>
+    </footer>
 </body>
 </html>
