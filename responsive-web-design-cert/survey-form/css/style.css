@@ -16,8 +16,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100%;
-    background: url('../images/weyland1.png') no-repeat center center/cover;
-    
+    background: url("../images/weyland2.jpg") no-repeat center center/cover;
 }
 
 #head {
@@ -30,14 +29,12 @@ body {
 }
 
 #title {
+    color: #eee;
+
 }
 
 #head img {
     max-width: 200px;
-}
-
-#head h1 {
-    color: #eee;
 }
 
 #description {
@@ -46,8 +43,8 @@ body {
 }
 
 #survey-form {
-    background-color: rgba(255,255,255,0.7);
-    border: 3px solid #333;
+    background-color: rgba(255,255,255,0.8);
+    border: 3px solid rgb(30, 184, 255);
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -55,14 +52,29 @@ body {
     margin: 30px 0 30px 0;
     border-radius: 50px;
     padding: 5px 50px 5px 50px;
+    font-weight: bold;
 }
 
 #survey-form p {
     font-weight: bold;
+    text-align: center;
 }
 
-.survey-questions {
-    adisplay: flex;
+#user-details {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#user-details input {
+    width: 50%;
+    height: 20px;
+    margin-left: 30px;
+}
+
+fieldset {
+  border: 1.5px solid rgb(30, 184, 255);
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 #description {
@@ -74,43 +86,43 @@ body {
     font-weight: bold;
 }
 
-.user-details {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #777;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
 .employed {
     display: flex;
-    flex-direction: column;
-    border: 2px solid #777;
+    flex-direction: row;
     padding: 10px 20px;
-    border-radius: 5px;
 }
 
 .location {
     display: flex;
-    flex-direction: column;
-    border: 2px solid #777;
+    flex-direction: row;
     padding: 10px 20px;
-    border-radius: 5px;
 }
 
 .safety {
     display: flex;
-    flex-direction: column;
-    border: 2px solid #777;
+    flex-direction: row;
     padding: 10px 20px;
-    border-radius: 5px;
 }
 
-/* button {
-    width: 500px;
+button {
+    width: 30%;
     height: 50px;
+    margin-top: 20px;
+    background: dodgerblue;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #f4f4f4;
+    align-self: center;
 }
-*/
+
+button:hover {
+    background: #0f73c4;
+}
+
+#thank-you {
+    align-self: center;
+}
 
 footer {
     background: black;
@@ -130,11 +142,17 @@ footer {
 }
 
 footer i:hover{
-    color: red;
+    color: rgb(30, 184, 255);
 }
 
 footer i, footer p {
-    color: rgb(243, 207, 194);
+    color: #f4f4f4;
     font-size: 14px;
 
+}
+
+@media (max-width: 520px) {
+    #survey-categories {
+        width: 50%;
+    }
 }

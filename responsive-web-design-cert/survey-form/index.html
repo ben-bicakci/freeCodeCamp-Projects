@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <title>FCC Survey Form</title>
-</head>
-<body>
-    <header id="head">
-        <div class="logo">
-            <img src="images/logo_small.jpg" alt="Weyland-Yutani logo">
-        </div>
-        <h1 id="title">Weyland-Yutani Employee Survey</h1>
-    </header>
-    <div class="container">
-        <section id="survey-form">
-            <p id="description">Help improve Weyland-Yutani by answering some quick questions</p>
-            <div class="user-details">
-                <label><span class="required">*</span>Name: <input id="name-label" type="text" placeholder="Enter your name"></label>
-                <label><span class="required">*</span>Email: <input id="email-label" type="text" placeholder="Enter your email"></label>
-                <label><span class="required">*</span>Age: <input id="number-label" type="number" placeholder="Enter your age"></label>
-                <label><span class="required">*</span>Division: <select id="dropdown" class="dropdown">
-                        <option disabled value>Select an option</option>
-                        <option value="corporate">Corporate</option>
-                        <option value="colony">Colony Administration</option>
-                        <option value="engineering">Engineering</option>
-                        <option value="manufacturing">Manufacturing</option>
-                        <option value="technology">Technology</option></select>
-                    </label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <title>FCC Survey Form</title>
+    </head>
+    <body>
+        <header id="head">
+            <div class="logo">
+                <img src="images/weyland_corp_logo.jpg" alt="Weyland-Yutani logo">
             </div>
-            <div class="survey-questions">
-                <p>How long have you been employed by Weyland-Yutani?</p>
-                <div class="employed">
-                    <label for="time-employed">
-                        <input id="Less than 1 year" type="radio" name="time-employed">Less than 1 year</label>
-                    <label for="time-employed">
-                        <input id="1-5 years" type="radio" name="time-employed">1-5 years</label>
-                    <label for="time-employed">
-                        <input id="5-10 years" type="radio" name="time-employed">5-10 years</label>
-                    <label for="time-employed">
-                        <input id="10+ years" type="radio" name="time-employed">10+ years</label>
+            <h1 id="title">Employee Survey</h1>
+        </header>
+        <div class="container">
+            <form id="survey-form">
+                <p id="description">Help improve Weyland Corporation by answering some quick questions</p>
+                <fieldset id="survey-categories">
+                    <div class="form-margin" id="user-details">
+                        <label id="name-label" for="name"><span class="required">*</span>Name: <input id="name" type="text" placeholder="Enter your name" required></label>
+                        <label id="email-label" for="email"><span class="required">*</span>Email: <input id="email" type="email" name="email" placeholder="Enter your email" required></label>
+                        <label id="number-label" for="age"><span class="required">*</span>Age: <input id="number" name="age" type="number" min="1" max="125" class="input-field" placeholder="Enter your age" required></label>
+                        <label id="division-label" for="division">Division: <select id="dropdown" name="division" class="dropdown">
+                                <option disabled value>Select an option</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="colony">Colony Administration</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="technology">Technology</option></select>
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="survey-questions">
+                    <fieldset id="survey-categories">
+                        <legend>How long have you been employed by Weyland-Yutani?</legend>
+                        <div class="employed">
+                            <label for="time-employed">
+                                <input id="Less than 1 year" type="radio" name="time-employed" value="1">Less than 1 year</label>
+                            <label for="time-employed">
+                                <input id="1-5 years" type="radio" name="time-employed" value="2">1-5 years</label>
+                            <label for="time-employed">
+                                <input id="5-10 years" type="radio" name="time-employed" value="3">5-10 years</label>
+                            <label for="time-employed">
+                                <input id="10+ years" type="radio" name="time-employed" value="4">10+ years</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="survey-categories" >
+                        <legend><span class="required">*</span>Current employment location:</legend>
+                        <div class="location">
+                            <label for="location">
+                                <input id="London" type="radio" name="location" value="1" required>London</label>
+                            <label for="location">
+                                <input id="San Francisco" type="radio" name="location" value="2">San Francisco</label>
+                            <label for="location">
+                                <input id="Tokyo" type="radio" name="location" value="3">Tokyo</label>
+                            <label for="location">
+                                <input id="LV-426" type="radio" name="location" value="4">LV-426</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="survey-categories" >
+                        <legend>During the past month, have you experienced a safety issue related to any of the following? (select any/all that apply)</legend>
+                        <div class="safety">
+                        <label for="safety">
+                            <input id="xenomorphs" type="checkbox" name="safety" value="1">Xenomorphs
+                        </label>
+                        <label for="safety">
+                            <input id="power-loaders" type="checkbox" name="safety" value="2">Power Loaders
+                        </label>
+                        <label for="safety">
+                            <input id="mining-accident" type="checkbox" name="safety" value="3">Mining Accident
+                        </label>
+                        <label for="safety">
+                            <input id="geoengineering-failure" type="checkbox" name="safety" value="4">Geoengineering Failure
+                        </label>
+                        </div>
+                    </fieldset>
                 </div>
-                <p><span class="required">*</span>Current employment location:</p>
-                <div class="location">
-                    <label for="location">
-                        <input id="London" type="radio" name="location">London</label>
-                    <label for="location">
-                        <input id="San Francisco" type="radio" name="location">San Francisco</label>
-                    <label for="location">
-                        <input id="Tokyo" type="radio" name="location">Tokyo</label>
-                    <label for="location">
-                        <input id="LV-426" type="radio" name="location">LV-426</label>
+                <br>
+                <div class="additional-comments">
+                    <label for="comments">Do you have any comments you would like to add?</label>
+                    <textarea id="comments" class="input-field" name="comments" placeholder="Enter any comments or suggestions you have here..."></textarea>
                 </div>
-                <p><span class="required">*</span>During the past month, have you experienced a safety issue related to any of the following? (select any/all that apply)</p>
-                <div class="safety">
-                <label for="xenomorphs">
-                    <input id="series1" type="checkbox" name="favourite-series">Xenomorphs
-                </label>
-                <label for="power-loaders">
-                    <input id="series2" type="checkbox" name="favourite-series">Power Loaders
-                </label>
-                <label for="mining-accident">
-                    <input id="series3" type="checkbox" name="favourite-series">Mining Accident
-                </label>
-                <label for="geoengineering-failure">
-                    <input id="series4" type="checkbox" name="favourite-series">Geoengineering Failure
-                </label>
-                </div>
-            </div>
-            <br>
-            <div class="additional-comments">
-                <label for="comments">Do you have any comments you would like to add?</label>
-                <textarea id="comments" class="input-field" name="comments" placeholder="Enter any comments or suggestions you have here..."></textarea>
-            </div>
-            <div id="submit">
-
-            </div>
-            <button id="submit">Submit</button>
-            <p>Thank you for completing this survey. We value the opinions of ALL our employees.</p>
-        </section>
-    </div>
-    <footer>
-        <div class="contacts">
-            <a class="footer-link" href="https://github.com/ben-bicakci" target="_blank"><i class="fa fa-github"></i></a>
-            <a class="footer-link" href="https://codepen.io/ben-bicakci/" target="_blank"><i class="fa fa-codepen"></i></a>
-            <a class="footer-link" href="https://www.freecodecamp.org/ben-bicakci" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+                <button id="submit">Submit</button>
+                <p id="thank-you">Thank you for completing this survey. We value the opinions of ALL our employees.</p>
+            </form>
         </div>
-        <div class="webmaster">
-            <p>Ben Bicakci 2019</p>
-        </div>
-    </footer>
-</body>
+        <footer>
+            <div class="contacts">
+                <a class="footer-link" href="https://github.com/ben-bicakci" target="_blank"><i class="fa fa-github"></i></a>
+                <a class="footer-link" href="https://codepen.io/ben-bicakci/" target="_blank"><i class="fa fa-codepen"></i></a>
+                <a class="footer-link" href="https://www.freecodecamp.org/ben-bicakci" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+            </div>
+            <div class="webmaster">
+                <p>Ben Bicakci 2019</p>
+            </div>
+        </footer>
+    </body>
 </html>
