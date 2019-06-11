@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(80, 151, 221);
+    margin: 0px;
+}
+
+.container {
+    padding-top: 150px;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 100%;
+    margin-top: 0px;
+}
+
+#header-img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#nav-bar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding-right: 20px;
+}
+
+@media (max-width: 650px) {
+    #video {
+        max-width: 100%;
+    }
+
+    #header-img {
+        height: 0px;
+        width: 0px;
+    }
+
+    header {
+        background-image: url(../images/psychasec_logo_small.png);
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 50%;
+    }
+
+    #nav-bar {
+        justify-items: flex-end;
+    }
+
+    #nav-bar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-bar a {
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+    }
+}
