@@ -11,7 +11,7 @@
     <body>
         <header id="head">
             <div class="logo">
-                <img src="images/weyland_corp_logo.jpg" alt="Weyland-Yutani logo">
+                <img src="https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/survey-form/images/weyland_corp_logo.jpg" alt="Weyland-Yutani logo">
             </div>
             <h1 id="title">Employee Survey</h1>
         </header>
@@ -19,7 +19,7 @@
             <form id="survey-form">
                 <p id="description">Help improve Weyland Corporation by answering some quick questions</p>
                 <fieldset id="survey-categories">
-                    <div class="form-margin" id="user-details">
+                    <div id="user-details">
                         <label id="name-label" for="name"><span class="required">*</span>Name: <input id="name" type="text" placeholder="Enter your name" required></label>
                         <label id="email-label" for="email"><span class="required">*</span>Email: <input id="email" type="email" name="email" placeholder="Enter your email" required></label>
                         <label id="number-label" for="age"><span class="required">*</span>Age: <input id="number" name="age" type="number" min="1" max="125" class="input-field" placeholder="Enter your age" required></label>
@@ -75,16 +75,28 @@
                         <label for="safety">
                             <input id="geoengineering-failure" type="checkbox" name="safety" value="4">Geoengineering Failure
                         </label>
+                        <label for="safety">
+                            <input id="cryo-sleep" type="checkbox" name="safety" value="5">Cryo-sleep failure
+                        </label>
+                        <label for="safety">
+                            <input id="industrial-accident" type="checkbox" name="safety" value="6">Industrial Accident
+                        </label>
+                        <label for="safety">
+                            <input id="facehugger" type="checkbox" name="safety" value="7">Facehuggers
+                        </label>
+                        <label for="safety">
+                            <input id="other" type="checkbox" name="safety" value="8">Other
+                        </label>
                         </div>
                     </fieldset>
                 </div>
                 <br>
-                <div class="additional-comments">
-                    <label for="comments">Do you have any comments you would like to add?</label>
+                <div id="textarea">
+                    <label for="comments">Do you have any comments or suggestions?</label>
                     <textarea id="comments" class="input-field" name="comments" placeholder="Enter any comments or suggestions you have here..."></textarea>
                 </div>
                 <button id="submit">Submit</button>
-                <p id="thank-you">Thank you for completing this survey. We value the opinions of ALL our employees.</p>
+                <p id="thank-you">Thank you for completing this survey.</p>
             </form>
         </div>
         <footer>
