@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FCC Product Landing Page</title>
-    <link Font>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <title>FCC Survey Form</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -13,35 +14,67 @@
         <img id="header-img" src="images/psychasec_logo.png" alt="Company logo">
         <nav id="nav-bar">
             <ul>
-                <a class="nav-link" href="#about" alt="Link to About section">About</a>
+                <a class="nav-link" href="#top" alt="Link to About section">About</a>
                 <a class="nav-link" href="#features" alt="Link to Features section">Features</a>
                 <a class="nav-link" href="#pricing" alt="Link to Pricing section">Pricing</a>
             </ul>
         </nav>
     </header>
-    <div class="container">
+    <div class="top"></div>
+    <div class="main">
+        <div class="bg-image">
+        </div>
         <section id="about">
-            <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input id="email" type=email placeholder="Email address" required>
-                <input id="submit" type=submit value="Contact Us" class="button">
-            </form>
+            <h1 id="main-heading">Learn to code, no prior coding experience required!</h2>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input id="email" type=email placeholder="Email address" required>
+                    <input id="submit" type=submit value="Contact Us" class="button">
+                </form>
             <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate aliquam. Vel quisquam, quia qui nisi unde quas autem assumenda dolore non fugiat nesciunt error nobis. Esse nam earum suscipit iste itaque tenetur debitis repudiandae hic eligendi optio quam provident officiis, amet libero impedit incidunt ipsam pariatur expedita exercitationem unde!</p>
+                <p id="info">Here at Hello World! Studios we believe everyone can learn to code.</p>
             </div>
         </section>
+        <div class="features-bg"></div>
         <section id="features">
             <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate aliquam. Vel quisquam, quia qui nisi unde quas autem assumenda dolore non fugiat nesciunt error nobis. Esse nam earum suscipit iste itaque tenetur debitis repudiandae hic eligendi optio quam provident officiis, amet libero impedit incidunt ipsam pariatur expedita exercitationem unde!</p>
+                <h3>Features</h3>
+                    <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate aliquam. Vel quisquam, quia qui nisi unde quas autem assumenda dolore non fugiat nesciunt error nobis. Esse nam earum suscipit iste itaque tenetur debitis repudiandae hic eligendi optio quam provident officiis, amet libero impedit incidunt ipsam pariatur expedita exercitationem unde!</p>
             </div>
             <div class="container">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/gobwcF6ZdTU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8XJ6r4U171I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
+        <div class="pricing-bg"></div>
         <section id="pricing">
             <div class="container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate aliquam. Vel quisquam, quia qui nisi unde quas autem assumenda dolore non fugiat nesciunt error nobis. Esse nam earum suscipit iste itaque tenetur debitis repudiandae hic eligendi optio quam provident officiis, amet libero impedit incidunt ipsam pariatur expedita exercitationem unde!</p>
+                <h3>Pricing</h3>
+                <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate aliquam. Vel quisquam, quia qui nisi unde quas autem assumenda dolore non fugiat nesciunt error nobis. Esse nam earum suscipit iste itaque tenetur debitis repudiandae hic eligendi optio quam provident officiis, amet libero impedit incidunt ipsam pariatur expedita exercitationem unde!</p>
             </div>
+            <ul id="pricing-list">
+                <li id="package">
+                    <a href="#">Package 1</a>
+                        <p>Package 1 info</p>
+                </li>
+                <li id="package">
+                    <a href="#">Package 1</a>
+                        <p>Package 1 info</p>
+                </li>
+                <li id="package">
+                    <a href="#">Package 1</a>
+                        <p>Package 1 info</p>
+                </li>
+            </ul>
         </section>
     </div>
+    <footer>
+        <div class="contacts">
+            <a class="footer-link" href="https://github.com/ben-bicakci" target="_blank"><i class="fa fa-github"></i></a>
+            <a class="footer-link" href="https://codepen.io/ben-bicakci/" target="_blank"><i class="fa fa-codepen"></i></a>
+            <a class="footer-link" href="https://www.freecodecamp.org/ben-bicakci" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+            </div>
+        <div class="webmaster">
+            <p>Ben Bicakci 2019</p>
+        </div>
+    </footer>
 </body>
 </html>
