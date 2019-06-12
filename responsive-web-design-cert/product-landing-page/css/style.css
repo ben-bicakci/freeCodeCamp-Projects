@@ -4,10 +4,11 @@ body {
     height: 100%;
 }
 
-header {
+#header {
     position: fixed;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: 2fr 1fr; */
     background: rgba(0, 0, 0, 0.836);
     width: 100vw;
     margin-top: 0px;
@@ -16,13 +17,20 @@ header {
 }
 
 #header-img {
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 10%;
+    max-width: 10%;
+    z-index: 1;
+}
+
+#header h2 {
+    color: white;
+    z-index: 1;
 }
 
 #nav-bar ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100vw;
     height: 20px;
 }
@@ -32,6 +40,7 @@ header {
     font-weight: bold;
     line-height: 1.5rem;
     padding-right: 20px;
+    color: white;
 }
 
 /* .main {
@@ -125,6 +134,22 @@ section {
     left: 20%;
     height: 70%;
     width: 70%;
+}
+
+#pricing-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#package-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#package-link a:hover {
+    color: red;
 }
 
 footer {
