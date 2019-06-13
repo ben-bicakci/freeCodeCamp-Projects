@@ -4,6 +4,18 @@ body {
     height: 100%;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 #header {
     position: fixed;
     display: flex;
@@ -251,5 +263,35 @@ footer a:hover {
     #nav-bar ul {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-height: 850px) {
+    #header {
+        height: 80px;
+    }
+
+    #pricing h3 {
+        margin: 20px 0px -40px 0px;
+    }
+
+    #pricing #info {
+        margin: 0px 0px -10px 0px;
+    }
+
+    h1 {
+        font-size: 0.75rem;
+    }
+    
+    h3 {
+        font-size: 0.75rem;
+    }
+    
+    p {
+        font-size: 0.70rem;
+    }
+
+    a {
+        font-size: 0.70rem;
     }
 }
