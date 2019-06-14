@@ -23,7 +23,6 @@ p {
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.8);
     width: 100vw;
-    margin-top: 0px;
     padding-bottom: 10px;
     z-index: 1;
     border-bottom: 1px #f4f4f4 solid;
@@ -35,14 +34,15 @@ p {
 }
 
 #header-img {
-    max-height: 5rem;
-    max-width: 5rem;
+    max-height: 4rem;
+    max-width: 4rem;
     z-index: 1;
 }
 
 #header h2 {
     color: #f4f4f4;
     z-index: 1;
+    font-size: 1.5rem;
 }
 
 #navbar {
@@ -53,6 +53,10 @@ p {
 #nav-bar ul {
     display: flex;
     flex-direction: row;
+}
+
+#nav-bar ul li {
+    list-style: none;
 }
 
 #nav-bar a {
@@ -83,7 +87,7 @@ section {
 }
 
 .bg-image {
-    background: url('../images/main_bg.jpg');
+    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/main_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -119,7 +123,7 @@ section {
 }
 
 .features-bg {
-    background: url('../images/bg3.jpg');
+    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/bg3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -151,7 +155,7 @@ section {
 }
 
 .pricing-bg {
-    background: url('../images/bg2.jpg');
+    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -291,7 +295,11 @@ footer a:hover {
         font-size: 0.70rem;
     }
 
+    #nav-bar ul li{
+        margin-top: -5px;
+    }
+
     a {
-        font-size: 0.70rem;
+        font-size: 0.55rem;
     }
 }
