@@ -6,25 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FCC Technical Documentation Page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <div class="container">
-        <nav id="navbar">
-            <a id="header-logo" href="https://www.python.org/">
-                <img id="logo" src='images/python-logo.png' alt="python logo">
+        <nav class="my-navbar" id="navbar">
+            <a id="header-logo" href="https://www.python.org/" target="_blank">
+                <img id="logo" src='https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/technical-documentation-page/images/python-logo.png' alt="python logo">
                 <header>Python 3.7</header>
-                <ul>
-                <li><a class="nav-link" href="#Introduction_to_Python">Introduction to Python</a>
+            </a>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Introduction_to_Python">Introduction to Python</a>
                 </li>
-                <li><a class="nav-link" href="#Numbers">Numbers</a>
+                <li>
+                    <a class="nav-link" href="#Numbers">Numbers</a>
                 </li>
-                <li><a class="nav-link" href="#Strings">Strings</a>
+                <li>
+                    <a class="nav-link" href="#Strings">Strings</a>
                 </li>
-                <li><a class="nav-link" href="#Lists">Lists</a>
+                <li>
+                    <a class="nav-link" href="#Lists">Lists</a>
                 </li>
-                <li><a class="nav-link" href="#First_Steps_Towards_Programming">First Steps Towards Programming</a></li>
-                <li><a class="nav-link" href="#if_Statements">if Statements</a></li>
+                <li>
+                    <a class="nav-link" href="#First_Steps_Towards_Programming">First Steps Towards Programming</a></li>
+                <li>
+                    <a class="nav-link" href="#if_Statements">if Statements</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#for_Statements">for Statements</a>
+                </li>
+                <li>
+                        <a class="nav-link" href="#Learn_More">Learn More</a>
+                    </li>
+                <li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
         <main id="main-doc">
@@ -148,28 +168,87 @@
     8
                             </code>
                         </pre>
-                <p>This example introduces several new features.</p>
+                <p>This example introduces several new features:</p>
                 <li>The first line contains a multiple assignment: the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.</li>
                 <li>The while loop executes as long as the condition (here: a < 10) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: < (less than), > (greater than), == (equal to), <= (less than or equal to), >= (greater than or equal to) and != (not equal to).
                 </li>
-                <li>The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.</li>
+                <li>The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility.</li>
+                <li>When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.</li>
                 <li>The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings.</li>
             </section>
             <section class="main-section" id="if_Statements">
                 <header>if Statements</header>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <p></p>
+                <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+                <div class="python-code">
+                    <pre class="python">
+                        <code>
+    >>> x = int(input("Please enter an integer: "))
+    Please enter an integer: 42
+    >>> if x < 0:
+    ...     x = 0
+    ...     print('Negative changed to zero')
+    ... elif x == 0:
+    ...     print('Zero')
+    ... elif x == 1:
+    ...     print('Single')
+    ... else:
+    ...     print('More')
+    ...
+    More
+                        </code>
+                    </pre>
+                </div>
+                <p>There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.</p>
+            </section>
+            <section class="main-section" id="for_Statements">
+                <header>for Statements</header>
+                <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):</p>
+                <div class="python-code">
+                    <pre class="python">
+                        <code>
+    >>> # Measure some strings:
+    ... words = ['cat', 'window', 'defenestrate']
+    >>> for w in words:
+    ...     print(w, len(w))
+    ...
+    cat 3
+    window 6
+    defenestrate 12
+                        </code>
+                    </pre>
+                </div>
+                <p>If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly make a copy. The slice notation makes this especially convenient:</p>
+                <div class="python-code">
+                    <pre class="python">
+                        <code>
+    >>> for w in words[:]:  # Loop over a slice the entire list.
+    ...     if len(w) > 6:
+    ...         words.insert(0, w)
+    ...
+    >>> words
+    ['defenestrate', 'cat', 'window', 'defenestrate']
+                        </code>
+                    </pre>
+                </div>
+                <p>With for w in words:, the example would attempt to create an infinite list, inserting defenestrate over and over again.</p>
+            </section>
+            <section class="main-section" id="Learn_More">
+                <header>Learn More</header>
+                <p>The content for this technical document was sourced from the <a href="https://docs.python.org/3/index.html" target="_blank">documentation</a> for Python 3.7.3.</p>
             </section>
         </main>
     </div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "my-navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "my-navbar";
+    }
+}
+</script>
+
 </body>
 </html>

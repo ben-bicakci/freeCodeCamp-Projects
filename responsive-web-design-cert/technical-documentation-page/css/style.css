@@ -25,7 +25,7 @@ body {
     text-decoration: none;
 }
 
-#navbar {
+.my-navbar {
     position: fixed;
     min-width: 190px;
     width: 200px;
@@ -33,25 +33,25 @@ body {
     background-color: #eee;
 }
 
-#navbar header {
+.my-navbar header {
     padding: 20px 0px 20px 10px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #f4f4f4
 }
 
-#navbar ul {
+.my-navbar ul {
     display: flex;
     flex-direction: column;
     padding: 0px 0px 0px 0px;
     margin-top: 10px;
 }
 
-#navbar ul li {
+.my-navbar ul li {
     list-style: none;
 }
 
-#navbar ul li a {
+.my-navbar ul li a {
     display:block;
     color: rgb(23, 70, 172);
     font-weight: bold;
@@ -60,9 +60,16 @@ body {
     padding-left: 15px;
 }
 
-#navbar ul li a:hover {
+.my-navbar ul li a:hover {
     background-color: rgb(23, 70, 172);
     color: #f4f4f4;
+}
+
+.my-navbar .icon {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(23, 70, 172);
 }
 
 #main-doc {
@@ -76,6 +83,7 @@ body {
 
 .main-section header {
     padding: 20px;
+    width: 100%;
     font-size: 1.5rem;
     background-color: rgb(23, 70, 172);
     color: #f4f4f4;
@@ -86,6 +94,12 @@ body {
     line-height: 1.5rem;
 }
 
+.main-section li {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+}
+
 .python {
     display: flex;
     flex-direction: column;
@@ -94,4 +108,59 @@ body {
     padding: 0.5rem;
     border-radius: 10px;
     line-height: 1.25rem;
+}
+
+@media screen and (max-width: 720px) {
+    #main-doc {
+        margin-left: 0px;
+    }
+
+    #header-logo {
+        display: none;
+    }
+    .my-navbar{
+        right: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 1;
+        background-color: rgba(0,0,0, 0);
+    }
+
+    .my-navbar ul li:not(:last-child) {
+        display: none;
+    }
+    
+    .my-navbar .icon {
+        margin: 0px;
+        float: right;
+        display: block;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .my-navbar.responsive {position: relative;}
+    .my-navbar.responsive .icon {
+        margin: 0px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .my-navbar.responsive {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 40px;
+    }
+
+    .my-navbar.responsive ul li {
+        float: none;
+        display: block;
+        text-align: left;
+        background-color: #eee;
+        width: 50%;
+    }
 }
