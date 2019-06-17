@@ -1,223 +1,99 @@
 body {
     font-family: Righteous, cursive, Arial, Helvetica, sans-serif;
-    background: rgba(0, 50, 255, 1);
-    color: #f4f4f4f4;
-    height: 100vh;
-    width: 100vw;
-    line-height: 1;
-    overflow: hidden;
-    margin: 0;
+    background: rgb(243, 186, 110);
+    color: #333;
+    padding: 0px;
+    margin: 0px;
 }
 
-@media (min-height: 600px) {
-    #img-div img {
-        max-width: 20% !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+#img-div {
+    display: none;
 }
 
-@media (max-width: 450px) {
-    .navbar {
-        max-height: 30px;
-    }
-
-    .navbar ul li a {
-        font-size: 10px
-    }
-
-    .navbar ul li:hover {
-        border-bottom: 0 !important;
-    }
-
-    .navbar ul li{
-        margin: 0 0;
-        padding: 0.5rem !important;
-    }
-
-    #tribute-info p{
-        opacity: 0.9;
-        font-size: 13px !important;
-    }
-
-}
-
-@media (max-height: 600px) {
-    #tribute-info p{
-        opacity: 0.9;
-        font-size: 12px !important;
-    }
-
-    #img-caption {
-        opacity: 0 !important;
-    }
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+#image {
+    display: block;
     width: 100%;
-    height: 100vh;
-    scroll-snap-align: center;
+    height: auto;
+    margin: auto;
 }
 
-section#title {
-    background: url('../images/rossi_main.jpg') no-repeat center center/cover;
-    justify-content: center;
+#showcase {
+    background-image: url('../images/tupac_main.jpg');
+    /* https://consequenceofsound.net/2017/06/tupac-shakurs-top-20-songs/ */
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 50px 0px;
 }
 
-section#title h1 {
-    font-size: 10vmin;
-    background-color: rgba(51, 51, 51, 0.6);
-    border-radius: 3%;
+#title {
+    height: 100%;
+    width: 100%;
 }
 
-section#title h2 {
-    font-size: 4vmin;
-    background-color: rgba(51, 51, 51, 0.6);
-    border-radius: 3%;
-}
-
-section#title p {
-    font-size: 6vmin;
-    background-color: rgba(51, 51, 51, 0.6);
-    border-radius: 3%;
-}
-
-section#info {
-    background: url('../images/rossi_wheelie.jpg') no-repeat center center/cover;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+#showcase #title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: #f4f4f4f4;
+    text-shadow: 3px 3px 5px black;
+    margin: 35% 0px 0px 0px;
+    padding-bottom: 50px;
 }
 
 #main {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    line-height: 1.75rem;
+}
+
+#main #bio-title {
+    text-align: center;
+}
+
+#tribute-info .credit {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#video {
+    background: black;
+    margin-bottom: 50px;
+}
+
+#video iframe{
+    margin: auto;
+}
+
+footer {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    margin: auto;
+    padding-top: 10px;
+    background: #333;
+    font-size: 1rem;
+    color: #f4f4f4;
+    text-align: center;
 }
 
-#tribute-info {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.75);
-    border-radius: 2%;
-    max-width: 90%;
-    max-height: 90%;
-    line-height: 1.6;
-    padding: 5px 5px 5px 5px;
+footer .contacts i {
+    color: #f4f4f4;
+    font-size: 1.25rem;
+    padding-right: 10px;
 }
 
-#tribute-info a{
-    text-decoration: none;
-    color: #f4f4f4f4
+footer .contacts i:hover {
+    color: rgb(243, 186, 110);
 }
 
-#tribute-info p{
-    opacity: 0.9;
-    font-size: 16px;
-}
+@media screen and (max-width: 600px) {
+    #showcase {
+        min-height: 130px;
+    }
 
-#tribute-info h2{
-    font-size: 20px;
-}
-
-#tribute-info h3{
-    font-size: 18px;
-}
-
-.navbar {
-    position: fixed;
-    /* top: 0; */
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background: rgba(0,0,0,0.7);
-}
-
-.navbar ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.navbar ul li:hover {
-    border-bottom: rgb(217, 255, 0) 2px solid;
-}
-
-.navbar ul li{
-    margin: 0 0;
-    padding: 1rem;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #f4f4f4f4;
-}
-
-.navbar ul li a:hover{
-    color: rgb(217, 255, 0);
-}
-
-#img-div img {
-    max-width: 0%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section#stats {
-    background: url('../images/rossi_lean.jpg') no-repeat center center/cover;
-    line-height: 1;
-}
-
-section#links {
-    background: url('../images/rossi_lean2.jpg') no-repeat center center/cover;
-    line-height: 1;
-}
-
-section#about {
-    background: url('../images/rossi_overhead.jpg') no-repeat center center/cover;
-    line-height: 1;
-}
-
-#links ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#links ul li a{
-    text-decoration: none;
-    color: #f4f4f4f4;
-}
-
-#links ul li a:hover{
-    color: rgb(217, 255, 0);
-}
-
-#tribute-info p a:hover{
-    color: rgb(217, 255, 0);
-}
-
-.footer-link {
-    padding: 0 10px 0 10px;
-    font-size: 40px;
-}
-
-.footer-link i:hover {
-    color: rgb(217, 255, 0);
+    #showcase #title {
+        display: none;
+    }
 }
