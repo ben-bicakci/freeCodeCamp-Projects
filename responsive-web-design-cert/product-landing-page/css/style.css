@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     background: #f4f4f4f4;
+    font-family: 'Dosis', sans-serif;
 }
 
 .container {
@@ -13,7 +20,7 @@ body {
     /*
     align-items: center;
     */
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0px auto;
     background: white;
@@ -21,48 +28,84 @@ body {
     2px 0px 10px 0px rgb(211, 205, 218);
 }
 
-.container .header {
+.container #header #nav-bar {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    padding: 20px 100px 0px 100px;
+}
+
+.container #header #nav-bar ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.container #header #nav-bar ul .nav-link {
+    display: inline;
+    margin: 0px auto;
+}
+
+.container #header #nav-bar ul .nav-link a {
+    color: rgb(255, 255, 81);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    background: rgb(68, 11, 116, 0.8);
+    border-radius: 10px;
+}
+
+.container #header {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(
         180deg,
-        rgb(3, 10, 73) 0%,  
-        rgb(15, 15, 241) 35%,
-        rgb(92, 6, 92) 95%
+        rgb(68, 11, 116) 0%,
+        rgb(30, 30, 253) 65%,
+        rgb(2, 27, 255) 95%
         );
     width: 100%;
-    margin: auto auto 500px auto;
+    margin: auto auto 600px auto;
     text-align: center;
     color: #f4f4f4f4;
 }
 
-.container .header .header-text {
+.container #header #nav-bar #header-img {
+    width: 15%;
+    background: rgb(68, 11, 116, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container #header .header-text {
     position: absolute;
-    top: 18%;
+    top: 25%;
 }
 
 .page-header, .page-footer {
     font-size: 2.5rem;
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 20px auto;
 }
 
 .sub-header, .sub-footer {
     font-size: 1.5rem;
     line-height: 2rem;
     color: rgb(133, 133, 133);
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 
-button {
-    width: 30%;
+.btn-top {
+    width: 18%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 80px;
     border: 1px solid rgb(68, 0, 68);
     border-radius: 5px;
     background: purple;
@@ -72,14 +115,86 @@ button {
     padding: 15px 0px;
 }
 
-.container .header #header-img {
+.btn-top a {
+    text-decoration: none;
+    color: white;
+}
+
+label {
+    width: 18%;
+    display: inline-block;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    border-radius: 5px;
+    padding: 13px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: rgb(35, 35, 252);
+}
+
+#sign-up {
+    display: none;
+}
+
+#sign-up:not(:checked) + form{
+    display: none;
+}
+
+form {
+    display: block;
+    margin: 20px 0px;
+}
+
+#email {
+    max-width: 200px;
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4f4;
+    border: 1px solid rgb(131, 27, 131);
+}
+
+#submit {
+    max-width: 70px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-bottom {
+    width: 15%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+.btn-bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+.container #header #phone-img-lg {
     position: relative;
-    top: 480px;
+    top: 550px;
     width: 400px;
     height: auto;
 }
 
-#phone-img {
+#phone-img-md {
     width: 300px;
     height: auto;
 }
@@ -90,7 +205,7 @@ button {
 
 .container #feature1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
     padding-left: 50px;
 }
@@ -102,7 +217,7 @@ button {
 
 .container #feature2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
     padding-right: 50px;
 
@@ -114,6 +229,21 @@ button {
     order: -1;
 }
 
+#video {
+    max-width: 100%;
+    margin: auto;
+    margin: 50px auto 150px auto;
+}
+
+#video iframe {
+    display: block;
+    margin: auto;
+}
+
+.container .footer #footer-text {
+    width: 100%;
+}
+
 .container .footer {
     position: relative;
     display: flex;
@@ -121,9 +251,9 @@ button {
     align-items: center;
     background: linear-gradient(
         180deg,
-        rgb(92, 6, 92) 0%,
-        rgb(15, 15, 241) 50%,
-        rgb(3, 10, 73) 95%
+        rgb(2, 27, 255) 0%,
+        rgb(30, 30, 253) 40%,
+        rgb(68, 11, 116) 95%
         );
     width: 100%;
     margin: auto;
@@ -132,6 +262,54 @@ button {
     padding-top: 50px;
 }
 
-.container .footer .footer-text {
-    margin-bottom: 100px;
+.container .footer .contacts {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 0px 200px 50px 0px;
+}
+
+.container .footer .contacts a {
+    padding: 10px 0px 0px 0px;
+    text-decoration: none;
+    color: #f4f4f4f4;
+}
+
+@media screen and (max-width: 660px) {
+    #video {
+        display: none;
+    }
+
+    .container #header #phone-img-lg {
+        position: relative;
+        top: 550px;
+        width: 200px;
+        height: auto;
+    }
+
+    #phone-img-md {
+        width: 150px;
+        height: auto;
+    }
+
+    .page-header, .page-footer {
+        font-size: 1.5rem;
+    }
+    
+    .sub-header, .sub-footer {
+        display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .showcase {
+        flex-direction: column;
+    }
+
+    .container #feature1 .features {
+        width: 80%;
+    }
+
+    .container #feature2 .features {
+        width: 80%;
+    }
 }
