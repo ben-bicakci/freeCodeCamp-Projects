@@ -44,12 +44,12 @@ body {
     margin-top: 10px;
 }
 
-.container #header #nav-bar ul .nav-link {
+.container #header #nav-bar ul li {
     display: inline;
     margin: 0px auto;
 }
 
-.container #header #nav-bar ul .nav-link a {
+.container #header #nav-bar ul li .nav-link {
     color: rgb(255, 255, 81);
     text-decoration: none;
     font-size: 1rem;
@@ -327,7 +327,7 @@ form {
         margin: auto;
     }
 
-    .container #header #nav-bar ul .nav-link a {
+    .container #header #nav-bar ul li .nav-link {
         font-size: 0.7rem;
 
     }
