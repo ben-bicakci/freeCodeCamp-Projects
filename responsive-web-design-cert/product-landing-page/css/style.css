@@ -1,305 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0px;
-    font-family: 'Encode Sans Expanded', sans-serif;
+    width: 100%;
     height: 100%;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.25rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-#header {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    padding-bottom: 10px;
-    z-index: 1;
-    border-bottom: 1px #f4f4f4 solid;
-}
-
-#logo {
-    display: flex;
-    padding: 10px 0 0 20px;
-}
-
-#header-img {
-    max-height: 4rem;
-    max-width: 4rem;
-    z-index: 1;
-}
-
-#header h2 {
-    color: #f4f4f4;
-    z-index: 1;
-    font-size: 1.5rem;
-}
-
-#navbar {
-    display: flex;
-    align-items: center;
-}
-
-#nav-bar ul {
-    display: flex;
-    flex-direction: row;
-}
-
-#nav-bar ul li {
-    list-style: none;
-}
-
-#nav-bar a {
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 1.5rem;
-    padding-right: 20px;
-    color: #f4f4f4;
-}
-
-#nav-bar a:hover {
-    color: purple;
-}
-
-section {
     margin: 0px;
+    padding: 0px;
+    background: #f4f4f4f4;
+    font-family: 'Dosis', sans-serif;
+}
+
+.container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*
     align-items: center;
-    height: 70%;
-    width: 90vw;
-    background: rgb(0,0,0,0.8);
-    border-radius: 5px;
-    padding: 20px 20px 20px 20px;
-    border: 2px #f4f4f4 solid;
-    color: #f4f4f4;
+    */
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    background: white;
+    box-shadow: -2px 0px 10px 0px rgb(211, 205, 218),
+    2px 0px 10px 0px rgb(211, 205, 218);
 }
 
-.bg-image {
-    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/main_bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    height: 100vh;
-    width: 100vw;
+.container #header #nav-bar {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    padding: 20px 100px 0px 100px;
+    z-index: 1000;
 }
 
-#about {
+.container #header #nav-bar ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.container #header #nav-bar ul li {
+    display: inline;
+    margin: 0px auto;
+}
+
+.container #header #nav-bar ul li .nav-link {
+    color: rgb(255, 255, 81);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    background: rgb(68, 11, 116, 0.8);
+    border-radius: 10px;
+}
+
+.container #header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        rgb(68, 11, 116) 0%,
+        rgb(30, 30, 253) 65%,
+        rgb(2, 27, 255) 95%
+        );
+    width: 100%;
+    margin: auto auto 600px auto;
+    text-align: center;
+    color: #f4f4f4f4;
+}
+
+.container #header #nav-bar #header-img {
+    max-width: 20%;
+    background: rgb(68, 11, 116, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container #header .header-text {
     position: absolute;
     top: 25%;
-    left: 20%;
-    height: 50%;
-    width: 50%;
-    text-align: center;
 }
 
-#form {
+.page-header, .page-footer {
+    font-size: 2.5rem;
+    width: 75%;
+    margin: 0px auto 20px auto;
+}
+
+.sub-header, .sub-footer {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgb(133, 133, 133);
+    width: 60%;
+    margin: 15px auto 15px auto;
+}
+
+#header-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-top {
+    width: 18%;
+    border: 1px solid rgb(68, 0, 68);
+    border-radius: 5px;
+    background: purple;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 0px;
+    margin-right: 10px;
+}
+
+.btn-top a {
+    text-decoration: none;
+    color: white;
+}
+
+label {
+    width: 18%;
+    display: inline-block;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    border-radius: 5px;
+    padding: 13px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+
+}
+
+label:hover {
+    cursor: pointer;
+    background-color: rgb(35, 35, 252);
+}
+
+#sign-up {
+    display: none;
+}
+
+#sign-up:not(:checked) + form{
+    display: none;
+}
+
+form {
+    display: block;
+    position: absolute;
+    top: 95%;
+    margin: 20px 0px;
+}
+
+#email {
+    max-width: 200px;
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4f4;
+    border: 1px solid rgb(131, 27, 131);
+}
+
+#submit {
+    max-width: 70px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-bottom {
+    width: 15%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(22, 194, 22);
+    border: 1px solid rgb(22, 172, 22);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+.btn-bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+.container #header #phone-img-lg {
+    position: relative;
+    top: 550px;
+    width: 400px;
+    height: auto;
+}
+
+#phone-img-md {
+    width: 300px;
+    height: auto;
+}
+
+.container .showcase {
+    margin: 100px auto;
+    padding-top: 100px;
+}
+
+.container #feature1 {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.container #feature1 .features {
+    width: 30%;
+    padding-left: 30px;
+}
+
+.container #feature2 {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding-right: 50px;
+
+}
+
+.container #feature2 .features {
+    width: 30%;
+    padding-right: 30px;
+    order: -1;
+}
+
+#video-container {
+    max-width: 100%;
+    margin: auto;
+    margin: 50px auto 150px auto;
+}
+
+#video-container iframe {
+    display: block;
+    margin: auto;
+}
+
+.container .footer #footer-text {
+    width: 100%;
+}
+
+.container .footer {
+    position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px #f4f4f4 solid;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px;
-}
-
-#main-heading {
-    padding-bottom: 50px;
-}
-
-#info {
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        rgb(2, 27, 255) 0%,
+        rgb(30, 30, 253) 40%,
+        rgb(68, 11, 116) 95%
+        );
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #f4f4f4f4;
     padding-top: 50px;
 }
 
-.features-bg {
-    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/bg3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    height: 100vh;
-    width: 100vw;
-}
-
-#features {
-    position: absolute;
-    top: 120%;
-    left: 10%;
-    height: 70%;
-    width: 70%;
-    text-align: center;
-}
-
-#feature-display {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    text-align: left;
-}
-
-#feature-display i{
-    font-size: 48px;
-    line-height: 5rem;
-}
-
-.pricing-bg {
-    background: url('https://raw.githubusercontent.com/ben-bicakci/freecodecamp-projects/master/responsive-web-design-cert/product-landing-page/images/bg2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    height: 100vh;
-    width: 100vw;
-}
-
-#pricing {
-    position: absolute;
-    top: 220%;
-    left: 10%;
-    height: 50%;
-    width: 70%;
-    text-align: center;
-}
-
-#price-display ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#price-display ul li {
+.container .footer .contacts {
     display: flex;
     flex-direction: column;
-    padding-right: 70px;
+    align-self: flex-end;
+    padding: 0px 100px 20px 0px;
 }
 
-#package-link a {
+.container .footer .contacts a {
+    padding: 10px 0px 0px 0px;
     text-decoration: none;
-    color: #f4f4f4;
-    font-weight: bold;
+    color: #f4f4f4f4;
 }
 
-#package-link a:hover {
-    color: purple;
-}
+@media screen and (max-width: 660px) {
+    #video-container {
+        display: none;
+    }
 
-footer {
-    background: rgb(0, 0, 0);
-    padding: 30px 0 5px 0;
-    color: #f4f4f4;
-    border-top: 2px #f4f4f4 solid;
-}
+    .container {
+        width: 100%;
+    }
 
-footer .contacts, footer .webmaster {
-    text-align: center;
-    color: #f4f4f4;
-    font-weight: bold;
-}
+    .container #header {
+        margin: auto auto 300px auto;
+    }
 
-footer a {
-    color: #f4f4f4;
-    font-size: 24px;
-    padding: 0 10px 0 10px;
-}
+    .container #header #phone-img-lg {
+        position: relative;
+        top: 300px;
+        width: 200px;
+        height: 100%;
+    }
 
-footer a:hover {
-    color: purple;
-}
+    #phone-img-md {
+        width: 150px;
+        height: 100%;
+    }
 
-@media (max-width: 800px) {
-    #video {
-        width: auto;
+    .page-header, .page-footer {
+        font-size: 1.5rem;
+    }
+    
+    .sub-header, .sub-footer {
+        display: none;
+    }
+
+    .container #header #nav-bar {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    .container #header #nav-bar ul {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container #header #nav-bar ul li .nav-link {
+        font-size: 0.7rem;
+
+    }
+
+    .container #header #nav-bar #header-img {
+        display: none;
+    }
+
+    #header-btns label, #header-btns a {
+        font-size: 0.8rem;
+    }
+
+    .btn-top {
+        width: 20%;
         height: auto;
-        }
-}
-
-@media (max-width: 450px) {
-    #video {
-        width: 0;
-        height: 0;
-        }
-}
-
-@media (max-width: 560px) {
-    #price-display ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    #price-display ul li {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        padding: 0px 5px 0px 5px;
+        margin-right: 10px;
     }
 
-    #price-display ul li p {
-        font-size: 12px;
+    .btn-top a {
+        margin-bottom: 5px;
     }
 
-    #pricing {
-        height: 70%;
+    label {
+        width: 20%;
+        height: auto;
+        padding: 0px 5px 0px 5px;
     }
 
-    #price-display ul li {
-        padding-right: 20px;
+    .btn-bottom {
+        width: 70%;
+        margin: 0px 0px 15px 0px;
     }
 
-    #header h2 {
-        font-size: 15px;
-    }
-
-    #nav-bar ul {
-        display: flex;
-        flex-direction: column;
+    .container .footer .contacts {
+        align-self: center;
+        padding: 0px;
+        margin-bottom: 10px;
     }
 }
 
-@media (max-height: 850px) {
-    #header {
-        height: 80px;
+@media screen and (max-width: 1000px) {
+    .showcase {
+        flex-direction: column;
     }
 
-    #pricing h3 {
-        margin: 20px 0px -40px 0px;
+    .container #phone-display {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0px;
+        margin: auto;
     }
 
-    #pricing #info {
-        margin: 0px 0px -10px 0px;
+    .container #feature1 {
+        width: 90%;
+        margin: 100px auto 50px auto;
+        padding: 0px;
     }
 
-    h1 {
-        font-size: 0.75rem;
+    .container #feature1 .features {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    .container #feature2 {
+        width: 90%;
+        margin: 50px auto;
+        padding: 0px;
     }
     
-    h3 {
-        font-size: 0.75rem;
-    }
-    
-    p {
-        font-size: 0.70rem;
-    }
-
-    #nav-bar ul li{
-        margin-top: -5px;
-    }
-
-    a {
-        font-size: 0.55rem;
+    .container #feature2 .features {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        padding: 0px;
+        order: 0;
     }
 }
