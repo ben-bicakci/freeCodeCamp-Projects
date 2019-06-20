@@ -237,13 +237,13 @@ form {
     order: -1;
 }
 
-#video {
+#video-container {
     max-width: 100%;
     margin: auto;
     margin: 50px auto 150px auto;
 }
 
-#video iframe {
+#video-container iframe {
     display: block;
     margin: auto;
 }
@@ -284,7 +284,7 @@ form {
 }
 
 @media screen and (max-width: 660px) {
-    #video {
+    #video-container {
         display: none;
     }
 
