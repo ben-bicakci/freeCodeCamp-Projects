@@ -300,12 +300,12 @@ form {
         position: relative;
         top: 300px;
         width: 200px;
-        height: auto;
+        height: 100%;
     }
 
     #phone-img-md {
         width: 150px;
-        height: auto;
+        height: 100%;
     }
 
     .page-header, .page-footer {
